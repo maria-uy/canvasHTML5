@@ -39,35 +39,35 @@ clearButton.addEventListener("click", () => {
 });
 
 colorSwatches.forEach((swatch) => {
- swatch.addEventListener("click", () => {
+ swatch.addEventListener("click", function() {
   const color = this.style.backgroundColor;
   ctx.strokeStyle = color;
  });
 });
 
-brushSizeSelect.addEventListener("change", () => {
+brushSizeSelect.addEventListener("change", function() {
  const brushSize = this.value;
  ctx.lineWidth = brushSize;
 });
 
 
-pencilToolButton.addEventListener("mousedown", () => {
+pencilToolButton.addEventListener("mousedown", function() {
  selectedTool = "pencil";
  ctx.globalCompositeOperation = "source-over";
 });
 
 
-brushToolButton.addEventListener("mousedown", () => {
+brushToolButton.addEventListener("mousedown", function() {
  selectedTool = "brush";
  ctx.globalCompositeOperation = "multiply";
 });
 
-eraserToolButton.addEventListener("mousedown", () => {
+eraserToolButton.addEventListener("mousedown", function() {
  selectedTool = "eraser";
  ctx.globalCompositeOperation = "destination-out";
 });
 
-colorPicker.addEventListener("input", () => {
+colorPicker.addEventListener("input", function() {
  const color = this.value;
  ctx.strokeStyle = color;
 });
